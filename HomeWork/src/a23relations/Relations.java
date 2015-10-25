@@ -1,4 +1,4 @@
-package a24relations;
+package a23relations;
 
 import java.io.InputStreamReader;
 import java.sql.Connection;
