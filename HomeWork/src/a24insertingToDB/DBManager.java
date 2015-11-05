@@ -122,8 +122,7 @@ public class DBManager {
 		Map<String, String> data = new HashMap<>();
 		for (Method method : t.getClass().getMethods()) {
 			String methodName = method.getName();
-			if (methodName.substring(0, 3).equals("get") && !methodName.equals("getClass")
-					&& !methodName.equals("getId")) {
+			if (methodName.startsWith("get") && !methodName.equals("getClass") && !methodName.equals("getId")) {
 				try {
 					String parameterName = methodName.substring(3);
 					String parameterValue = (String) method.invoke(t);
